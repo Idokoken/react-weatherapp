@@ -1,13 +1,112 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-image: url("assets/weather1.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.weather {
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#weather-app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(88, 4, 95);
+  height: 10vh;
+  margin-bottom: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.app-name {
+  color: white;
+  margin: 1.5rem, 0;
+  font-size: 1.5rem;
+}
+
+.details {
+  position: relative;
+  top: 80px;
+}
+.weather-search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+input {
+  border: 2px solid darkgreen;
+  opacity: 0.5;
+  border-radius: 10px;
+  height: 1.7rem;
+  margin-right: 10px;
+  padding-left: 1rem;
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+button {
+  background-color: darkgreen;
+  border-radius: 10px;
+  height: 2rem;
+  color: white;
+  font-size: large;
+  width: 5rem;
+}
+#weather-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(212, 204, 204, 0.7);
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2rem;
+  box-shadow: 5px 10px 8px 10px #888888;
+}
+
+.location-city,
+.temp-value,
+.temp-reading,
+.weather-icon {
+  color: darkgreen;
+  font-size: 30px;
+  margin: 15px 0;
+}
+.location-date {
+  font-size: 25px;
+  color: darkgreen;
+  margin: 15px 0;
+}
+
+footer {
+  background-color: rgb(88, 4, 95);
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .weather-search {
+    margin-bottom: 5%;
+  }
+  #weather-details {
+    width: 40%;
+  }
+  .location-date {
+    font-size: 30px;
+  }
 }
