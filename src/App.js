@@ -7,10 +7,6 @@ function App() {
   const [query, setQuery] = useState("lagos");
   const [search, setSearch] = useState("");
 
-  //const d = new Date();
-  //const d = new Date(allData.date * 1000).toLocaleDateString();
-  //const newD = moment(d).format("h:mm a, MMM Do YYYY");
-
   const changeHandler = (e) => {
     setSearch(e.target.value);
   };
@@ -54,7 +50,7 @@ function App() {
   return (
     <div className="weather">
       <div id="weather-app">
-        <div className="app-name">CREATIVE KEN</div>
+        <div className="app-name">Weepee</div>
         <div className="app-name">Weather App</div>
       </div>
       <div className="details">

@@ -86,7 +86,7 @@ button {
 
 footer {
   background-color: rgb(88, 4, 95);
-  height: 5%;
+  min-height: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
