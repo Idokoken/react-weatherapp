@@ -7,8 +7,9 @@ function App() {
   const [query, setQuery] = useState("lagos");
   const [search, setSearch] = useState("");
 
-  const d = new Date();
-  const newD = moment(d).format("h:mm a, MMM Do YYYY");
+  //const d = new Date();
+  //const d = new Date(allData.date * 1000).toLocaleDateString();
+  //const newD = moment(d).format("h:mm a, MMM Do YYYY");
 
   const changeHandler = (e) => {
     setSearch(e.target.value);
@@ -59,19 +60,26 @@ function App() {
       <div className="details">
         <div className="weather-search">
           <form onSubmit={handleSumit}>
-            <input type="text" value={search} onChange={changeHandler} />
+            <input
+              type="text"
+              value={search}
+              onChange={changeHandler}
+              placeholder="enter your location"
+            />
             <button className="btn btn-primary">Search</button>
           </form>
         </div>
 
         <div id="weather-details">
-          <div className="location-date">{newD}</div>
+          <div className="location-date">
+            {moment(weather.dt * 1000).format(" MMM Do YYYY")}
+          </div>
           <div className="location-city">
             {weather ? weather.name + ", " : ""}
             {weather.sys ? weather.sys.country : ""}
           </div>
           <div className="temp-value">
-            {weather.main ? weather.main.temp : ""}
+            {weather.main ? Math.round(weather.main.temp) + " degrees" : ""}
           </div>
           <div className="weather-icon">
             <img
